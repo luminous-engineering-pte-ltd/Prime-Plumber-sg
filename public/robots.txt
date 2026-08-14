@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://primeplumbing.sg/sitemap-index.xml
+Sitemap: https://primeplumbingsg.com/sitemap-index.xml

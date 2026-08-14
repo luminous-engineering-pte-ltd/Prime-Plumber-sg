@@ -1,5 +1,13 @@
----
-import { MessageCircle } from 'lucide-astro';
----
-<a class="wa" href="https://wa.me/6568174420?text=Hello%20PrimeFlow%2C%20I%20need%20plumbing%20help." target="_blank" rel="noopener" aria-label="Chat with PrimeFlow on WhatsApp"><MessageCircle/></a>
-<style>.wa{position:fixed;z-index:30;right:22px;bottom:22px;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:white;background:#18b768;box-shadow:0 12px 30px #08683450}.wa:hover{transform:translateY(-3px)}@media(max-width:500px){.wa{width:48px;height:48px;right:14px;bottom:14px}}</style>
+<a class="wa" href="https://wa.me/6581836772" target="_blank" rel="noopener noreferrer" aria-label="Chat with Prime Plumbing SG on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3A12.9 12.9 0 0 0 5.11 22.75L3.3 29l6.4-1.68A12.98 12.98 0 1 0 16.04 3Zm0 23.76a10.73 10.73 0 0 1-5.47-1.5l-.39-.23-3.8 1 1.02-3.7-.25-.38a10.76 10.76 0 1 1 8.89 4.81Zm5.9-8.06c-.32-.16-1.92-.95-2.22-1.06-.3-.11-.51-.16-.73.16-.21.32-.83 1.06-1.02 1.27-.19.22-.38.24-.7.08-.33-.16-1.37-.5-2.61-1.61a9.76 9.76 0 0 1-1.81-2.26c-.19-.32-.02-.5.14-.66.15-.14.33-.38.49-.57.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.4-.3.33-1.13 1.11-1.13 2.7 0 1.6 1.16 3.14 1.32 3.36.16.21 2.29 3.49 5.54 4.9.78.33 1.38.53 1.85.68.78.25 1.48.21 2.04.13.62-.1 1.92-.79 2.19-1.55.27-.75.27-1.4.19-1.54-.08-.14-.3-.22-.62-.38Z"/></svg>
+</a>
+<style>
+  .wa{position:fixed;z-index:40;right:max(20px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));width:56px;height:56px;border:1px solid #ffffff52;border-radius:50%;display:grid;place-items:center;color:#fff;background:linear-gradient(145deg,#2ee079,#16a85b);box-shadow:0 12px 30px #087a3f52,0 0 0 0 #25d36655;transition:transform .25s ease,box-shadow .25s ease;animation:wa-pulse 2.8s ease-out infinite;isolation:isolate}
+  .wa::before{content:'';position:absolute;inset:4px;border-radius:inherit;border:1px solid #ffffff38;pointer-events:none}
+  .wa svg{width:29px;height:29px;filter:drop-shadow(0 2px 3px #07562c55)}
+  .wa:hover{transform:translateY(-4px) scale(1.06);box-shadow:0 18px 36px #087a3f66,0 0 0 7px #25d3661f}
+  .wa:focus-visible{outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 6px #1877f2}
+  @keyframes wa-pulse{0%,58%,100%{box-shadow:0 12px 30px #087a3f52,0 0 0 0 #25d36655}78%{box-shadow:0 12px 30px #087a3f52,0 0 0 12px #25d36600}}
+  @media(max-width:620px){.wa{width:50px;height:50px;right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom))}.wa svg{width:26px;height:26px}}
+  @media(prefers-reduced-motion:reduce){.wa{animation:none}}
+</style>

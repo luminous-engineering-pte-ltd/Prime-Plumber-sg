@@ -70,8 +70,8 @@ const serviceDefinitions = [
 export const services: PlumbingService[] = serviceDefinitions.map((service) => ({
   ...service,
   seo: {
-    title: `${service.title} Singapore | PrimeFlow Plumbing`,
-    description: `${service.description} Request a clear quote from PrimeFlow Plumbing Singapore.`
+    title: `${service.title} Singapore | Prime Plumbing SG`,
+    description: `${service.description} Request a clear quote from Prime Plumbing SG in Singapore.`
   },
   faqs: [
     [`How much does ${service.title.toLowerCase()} cost in Singapore?`, 'Pricing depends on access, materials and the extent of the issue. We confirm the recommended scope and quote before work begins.'],

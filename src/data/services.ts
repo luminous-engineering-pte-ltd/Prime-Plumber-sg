@@ -1,10 +1,13 @@
+import type { ImageMetadata } from 'astro';
+import serviceImage from '../assets/service-plumber.webp';
+
 export type ServiceFAQ = [question: string, answer: string];
 export type PlumbingService = {
   slug: string;
   title: string;
   icon: string;
   description: string;
-  image: string;
+  image: ImageMetadata;
   subservices: string[];
   seo: { title: string; description: string };
   faqs: ServiceFAQ[];
@@ -14,55 +17,55 @@ const serviceDefinitions = [
   {
     slug: 'pipe-leak-repair', title: 'Pipe & Leak Repair', icon: 'Droplets',
     description: 'Accurate diagnosis and durable repairs for exposed, concealed and burst pipes in Singapore properties.',
-    image: '/images/service-plumber.png',
+    image: serviceImage,
     subservices: ['Pipe Leak & Burst Pipe Repair','Concealed Pipe Leak Repair','Water Pipe Installation & Replacement','Plumbing Repiping','Water Leakage Detection (Visual Inspection)','Exposed Copper Pipe Repair','PPR Pipe Repair','PVC & UPVC Pipe Repair','Stainless Steel Pipe Repair']
   },
   {
     slug: 'drain-choke-clearing', title: 'Drain & Choke Clearing', icon: 'Waves',
     description: 'Targeted clearing that restores flow while protecting your pipes, traps and drainage system.',
-    image: '/images/service-plumber.png',
+    image: serviceImage,
     subservices: ['Choked Drain & Drainage Pipe Clearing','Floor Trap Choke Removal','Kitchen Sink Choke Clearing','Toilet Sink & Bathroom Choke Clearing','Bathtub Choke Removal','Water Pipe Choke Clearing','Inspection Chamber Clearing','High-Pressure Drain Jetting','Drain Cleaning & Repair','Clogged Toilet, Drain & Sink Repair','Kitchen & Bathroom Flood Repair']
   },
   {
     slug: 'toilet-services-fixtures', title: 'Toilet Services & Fixtures', icon: 'Bath',
     description: 'Careful installation and repair for toilet bowls, cisterns, flush systems and seats.',
-    image: '/images/service-plumber.png',
+    image: serviceImage,
     subservices: ['Toilet Bowl Installation & Replacement','Urinal Installation & Replacement','Raised Toilet Seat & Bidet Seat Installation','Toilet Flush System Installation & Repair','Toilet Cistern Repair','Toilet & Toilet Bowl Leak Repair','Toilet Bowl Siphon Replacement (Water Discharge Fix)','Toilet Seat Cover Replacement & Repair']
   },
   {
     slug: 'tap-sink-basin-services', title: 'Tap, Sink & Basin Services', icon: 'Faucet',
     description: 'Neat fixture installation and dependable repairs for kitchens, bathrooms and utility areas.',
-    image: '/images/service-plumber.png',
+    image: serviceImage,
     subservices: ['Tap & Faucet Installation & Repair','Shower Mixer Tap Installation','Kitchen Sink Installation & Replacement','Wash Basin & Bathroom Sink Installation & Replacement','Basin Stopper Installation & Replacement','Sink Plumbing Services (Drainage Pipes, Water Lines, Mixer Connections)','Bottle Trap Installation (Kitchen Sink & Bathroom Basin)']
   },
   {
     slug: 'water-heater-services', title: 'Water Heater Services', icon: 'Flame',
     description: 'Safe installation, replacement and servicing for instant and storage water heaters.',
-    image: '/images/service-plumber.png',
+    image: serviceImage,
     subservices: ['Storage Water Heater Installation & Replacement','Instant Water Heater Installation & Replacement','Water Heater Repair & General Servicing']
   },
   {
     slug: 'shower-bathroom-fixtures', title: 'Shower & Bathroom Fixtures', icon: 'ShowerHead',
     description: 'Thoughtful bathroom upgrades and repairs, installed cleanly with proper seals and fittings.',
-    image: '/images/service-plumber.png',
+    image: serviceImage,
     subservices: ['Shower Head & Set Installation','Rain Shower Installation','Bidet Spray Installation','Shower Handset Holder Installation & Replacement','Exhaust Fan Installation (Ceiling Mounted & Toilet Ventilation Fan)','BTO Toilet Acrylic Panel with Lighting Service']
   },
   {
     slug: 'special-safety-installations', title: 'Special & Safety Installations', icon: 'ShieldCheck',
     description: 'Practical accessibility, filtration and waterproofing improvements for safer everyday use.',
-    image: '/images/service-plumber.png',
+    image: serviceImage,
     subservices: ['Toilet & Bathroom Grab Bar Installation (For Elderly)','Shower Chair & Bench Installation / Replacement','Garbage Disposal Installation','Water Filtration System Installation','Bathroom & General Area Waterproofing Services']
   },
   {
     slug: 'property-commercial-plumbing', title: 'Property & Commercial Plumbing', icon: 'Building2',
     description: 'Responsive plumbing support for HDBs, condos, landed homes and operating businesses.',
-    image: '/images/service-plumber.png',
+    image: serviceImage,
     subservices: ['HDB Plumbing Services','Condo Plumbing Services','Landed Home Plumbing Services','Commercial Plumbing (Offices, Clinics, Retail Shops)','Grease Trap Cleaning','Restaurant Plumbing Services']
   },
   {
     slug: 'emergency-other-services', title: 'Emergency & Other Services', icon: 'Siren',
     description: 'Fast help for urgent leaks, serious chokes and plumbing failures—day or night.',
-    image: '/images/service-plumber.png',
+    image: serviceImage,
     subservices: ['24/7 Emergency Plumbing Services (Urgent Leaks, Chokes, Burst Pipes)','24-Hour Plumber Singapore','General Plumbing Service','Licensed Plumber in Singapore','Specialized Toilet Plumber Services']
   }
 ];

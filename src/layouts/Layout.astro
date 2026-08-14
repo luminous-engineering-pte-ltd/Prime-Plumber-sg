@@ -1,0 +1,26 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+const { title='PrimeFlow Plumbing Singapore', description='Reliable plumbing services for homes and businesses across Singapore.', image='/images/hero-plumber.png', schema } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const baseSchema = { '@context':'https://schema.org', '@type':['LocalBusiness','Plumber'], name:'PrimeFlow Plumbing', url:'https://primeplumbing.sg', telephone:'+65 6817 4420', email:'hello@primeplumbing.sg', areaServed:'Singapore', image:new URL(image, Astro.site).href, priceRange:'$$' };
+---
+<!doctype html>
+<html lang="en-SG">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:type" content="website" /><meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:url" content={canonical} /><meta property="og:image" content={new URL(image, Astro.site)} />
+  <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script type="application/ld+json" set:html={JSON.stringify(baseSchema)} />
+  {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+</head>
+<body><Navbar /><main><slot /></main><Footer /><WhatsAppButton /></body>
+</html>
